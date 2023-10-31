@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-
+import about_us_img from "@assets/img/bg/hw-img.png";
 const about_content = {
     subtitle: "Innovating Marketing & Engineering Solutions",
     title: "Driving Business Growth for the Next-Gen Enterprises",
