@@ -1,8 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-import about_us_img from "@assets/img/bg/hw-img.png";
-import Link from 'next/link';
+const about_content = {
+    subtitle: "Innovating Marketing & Engineering Solutions",
+    title: "Driving Business Growth for the Next-Gen Enterprises",
+    description: "Exclusive Medias LLC excels at delivering data-driven marketing strategies and cutting-edge engineering solutions. We're committed to fostering business growth, optimizing ROI, and ensuring unparalleled customer experiences."
+};
+
+const { subtitle, title, description } = about_content;
 
 const AboutArea = () => {
     return (
@@ -12,14 +17,12 @@ const AboutArea = () => {
                     <div className="row">
                         <div className="col-xl-6 col-lg-6">
                             <div className="fea-3-content pt-150">
-                                <span>how it works</span>
-                                <h2>For the next generation of big businesses</h2>
-                                <p>Divide there our divide fifth creepeth second which multiply evening fill so abundantly let upon
-                                    there saw light behold he bearing hath morning over lesser image said. Whales and second.</p>
+                                <span>{subtitle}</span>
+                                <h2>{title}</h2>
+                                <p>{description}</p>
                                 <div data-aos="fade-up">
-                                    <Link href="#" className="btn-grad"><span>Read more</span></Link>
+                                    <a href="#" className="btn-grad"><span>Read more</span></a>
                                 </div>
-
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6 offset-xl-1">

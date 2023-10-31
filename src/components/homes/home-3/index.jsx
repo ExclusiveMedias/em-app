@@ -20,10 +20,10 @@ const HomeThree = () => {
         <FeaturesArea />
         <ServiceArea />
         <AboutArea />
-        <TeamArea />
-        <TestimonialArea style_3={true} />
+
+        {/* <TestimonialArea style_3={true} />
         <DeviceArea />
-        <SubscriptionArea />
+        <SubscriptionArea /> */}
       </main>
       <Footer home_2={true} />
     
