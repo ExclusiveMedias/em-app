@@ -7,57 +7,88 @@ import * as yup from "yup";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
+
 const schema = yup .object({
     first_name: yup.string().required().label("First Name"),
     last_name: yup.string().required().label("Last Name"),
     email: yup.string().required().label("Email"),
     
 }).required();
-const sendDataToSendGrid = async (first_name, last_name, email) => {
-    const data = {
-      "list_ids": ["cd5ffe1d-548c-4d25-9eac-7d2951f0b647"],
-      "contacts": [
-        {
-          "first_name": first_name,
-          "last_name": last_name,
-          "email": email,
-        }
-      ]
-    };
+// const sendDataToSendGrid = async (first_name, last_name, email) => {
+//   console.log(listSecrets);
+//     const data = {
+//       "list_ids": ["cd5ffe1d-548c-4d25-9eac-7d2951f0b647"],
+//       "contacts": [
+//         {
+//           "first_name": first_name,
+//           "last_name": last_name,
+//           "email": email,
+//         }
+//       ]
+//     };
   
-    try {
-      const response = await fetch('https://api.sendgrid.com/v3/marketing/contacts', {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer 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`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+//     try {
+//       const response = await fetch('https://api.sendgrid.com/v3/marketing/contacts', {
+//         method: 'PUT',
+//         headers: {
+//           'Authorization': `Bearer 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`,
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//       });
   
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Error:', errorData);
-        return;
-      }
+//       if (!response.ok) {
+//         const errorData = await response.json();
+//         console.error('Error:', errorData);
+//         return;
+//       }
   
-      console.log('Success:', await response.json());
+//       console.log('Success:', await response.json());
   
-    } catch (error) {
-      console.error('Error:', error.message);
-    }
-  };
+//     } catch (error) {
+//       console.error('Error:', error.message);
+//     }
+//   };
   
  
 const ComingSoonArea = () => {
     const { register, handleSubmit,  reset, formState: { errors }, } = useForm({
         resolver: yupResolver(schema),
       });
-      const onSubmit = (data) =>{          
-        notify()
-        sendDataToSendGrid(data.first_name, data.last_name, data.email)
-        reset()
-      }; 
+      const onSubmit = async (data) => {
+        notify();
+      
+        try {
+          const response = await fetch('/api/mail', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              first_name: data.first_name,
+              last_name: data.last_name,
+              email: data.email,
+            }),
+          });
+      
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Error:', errorData);
+            // Handle the error as needed, e.g., show an error message
+            return;
+          }
+      
+          console.log('Success:', await response.json());
+          // Handle success as needed, e.g., show a success message
+      
+          reset(); // Reset the form
+        } catch (error) {
+          console.error('Error:', error.message);
+          // Handle the error as needed, e.g., show an error message
+        }
+      };
       const notify = () => toast("You are in the now.");
  
 
