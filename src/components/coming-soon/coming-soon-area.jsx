@@ -84,7 +84,7 @@ const ComingSoonArea = () => {
                     <div className="row">
                         <div className="col-xl-5 col-lg-6">
                             <div className="comin-soon-text">
-                                <h2>Exciting Innovations Ahead</h2>                             
+                                <h2>Exciting Marketing Innovations Ahead</h2>                             
                                 <p>Stay tuned for groundbreaking AI solutions and transformative educational courses. Be the first to know by following us!</p>
                                 <div className="contact-form mb-30">
                                     <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
