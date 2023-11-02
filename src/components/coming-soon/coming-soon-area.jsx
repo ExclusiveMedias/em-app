@@ -54,7 +54,7 @@ const ComingSoonArea = () => {
           // Handle the error as needed, e.g., show an error message
         }
       };
-      const notify = () => toast("You are added to the list.");
+      const notify = () => toast("You are now added to the list.");
  
 
     return (
