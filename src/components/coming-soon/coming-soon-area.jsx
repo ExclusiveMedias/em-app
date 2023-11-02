@@ -16,42 +16,7 @@ const schema = yup .object({
     email: yup.string().required().label("Email"),
     
 }).required();
-// const sendDataToSendGrid = async (first_name, last_name, email) => {
-//   console.log(listSecrets);
-//     const data = {
-//       "list_ids": ["cd5ffe1d-548c-4d25-9eac-7d2951f0b647"],
-//       "contacts": [
-//         {
-//           "first_name": first_name,
-//           "last_name": last_name,
-//           "email": email,
-//         }
-//       ]
-//     };
-  
-//     try {
-//       const response = await fetch('https://api.sendgrid.com/v3/marketing/contacts', {
-//         method: 'PUT',
-//         headers: {
-//           'Authorization': `Bearer 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`,
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(data),
-//       });
-  
-//       if (!response.ok) {
-//         const errorData = await response.json();
-//         console.error('Error:', errorData);
-//         return;
-//       }
-  
-//       console.log('Success:', await response.json());
-  
-//     } catch (error) {
-//       console.error('Error:', error.message);
-//     }
-//   };
-  
+
  
 const ComingSoonArea = () => {
     const { register, handleSubmit,  reset, formState: { errors }, } = useForm({
@@ -89,7 +54,7 @@ const ComingSoonArea = () => {
           // Handle the error as needed, e.g., show an error message
         }
       };
-      const notify = () => toast("You are in the now.");
+      const notify = () => toast("You are added to the list.");
  
 
     return (
