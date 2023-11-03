@@ -67,7 +67,7 @@ const Footer = ({home_2, style_4, footer_bg, no_style, style_footer_el}) => {
                                         <Link href="/"> 
                                             <Image src={footer_logo} alt="theme-pure" />
                                         </Link>
-                                        <p>Winged moving moveth created for shall and a divide the their days male midst shall hath doesn't won't for. Midst life.Over a great night. Green upon years rule ying.</p>
+                                        <p>Unlock your business's potential with cutting-edge digital solutions. We're where innovation meets execution.</p>
                                     </div>
                                     <div className="footer-social">
                                         <SocialLinks /> 

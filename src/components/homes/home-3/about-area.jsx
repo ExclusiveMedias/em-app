@@ -4,7 +4,7 @@ import about_us_img from "@assets/img/bg/hw-img.png";
 const about_content = {
     subtitle: "Innovating Marketing & Engineering Solutions",
     title: "Driving Business Growth for the Next-Gen Enterprises",
-    description: "Exclusive Medias LLC excels at delivering data-driven marketing strategies and cutting-edge engineering solutions. We're committed to fostering business growth, optimizing ROI, and ensuring unparalleled customer experiences."
+    description: "Exclusive Medias excels at delivering data-driven marketing strategies and cutting-edge engineering solutions. We're committed to fostering business growth, optimizing ROI, and ensuring unparalleled customer experiences."
 };
 
 const { subtitle, title, description } = about_content;
