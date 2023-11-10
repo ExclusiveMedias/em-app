@@ -3,29 +3,30 @@ import Link from "next/link";
 
 const social_links = [
   {
-    link: "http://facebook.com",
+    link: "https://www.facebook.com/ExclusiveMedias",
     target: "_blank",
-    icon: "fab fa-facebook-f", 
-    color: "one",
+    icon: "fab fa-facebook-f ",
   },
   {
-    link: "http://twitter.com",
+    link: "https://twitter.com/ExclusiveMedias",
     target: "_blank",
-    icon: "fab fa-twitter", 
-    color: "two",
+    icon: "fab fa-linkedin-in",
   },
   {
-    link: "https://www.linkedin.com",
+    link: "https://www.linkedin.com/company/exclusivemedias/",
     target: "_blank",
-    icon: "fab fa-linkedin", 
-    color: "three",
+    icon: "fab fa-twitter",
   }, 
   {
-    link: "https://www.skype.com",
+    link: "https://www.pinterest.com/exclusivemedias",
     target: "_blank",
-    icon: "fab fa-skype", 
-    color: "four",
+    icon: "fab fa-pinterest",
   },
+  {
+    link: "https://www.youtube.com/@exclusive-medias",
+    target: "_blank",
+    icon: "fab fa-youtube",  
+},
 ];
 
 const SocialLinks = () => {

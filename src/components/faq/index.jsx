@@ -9,8 +9,8 @@ const Faq = () => {
         <>
             <HeaderTwo />
             <main>
-                <Breadcrumb top_title="Frequently Ask Question" title="FAQ" />
-                <FaqArea />
+                <Breadcrumb top_title="Frequently Ask Question" sub_title="Have questions? We have compiled a list of answers to the most common queries we receive. Get insights into how we can help streamline your business processes with AI and automation." title="FAQ" />
+                <FaqArea showTitle={false}/>
                 <FaqFormArea />
             </main>
             <Footer />

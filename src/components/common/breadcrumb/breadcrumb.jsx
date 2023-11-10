@@ -7,7 +7,7 @@ import breadcrumb_shape_2 from "@assets/img/shape/shape3.png";
 import breadcrumb_shape_3 from "@assets/img/shape/shape-sq.png";
 import breadcrumb_shape_4 from "@assets/img/shape/shape-c-2.png";
 
-const Breadcrumb = ({top_title="About This Page", title= "title"}) => {
+const Breadcrumb = ({top_title="About This Page", title= "title", sub_title="Go fifth signs dry light sea created greater"}) => {
     return (
         <>
         <div className="page-title-area pos-relative gray-bg pt-90 pb-60 fix" 
@@ -20,13 +20,13 @@ const Breadcrumb = ({top_title="About This Page", title= "title"}) => {
                 </div>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6">
+                        <div className="col-lg-9">
                             <div className="page-title mb-30">
                                 <h3>{top_title}</h3>
-                                <p>Go fifth signs dry light sea created greater</p>
+                                <p>{sub_title}</p>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-3">
                             <div className="breadcrumb-list text-left text-lg-end mb-30">
                                 <ul>
                                     <li><Link href="/">Home</Link></li>

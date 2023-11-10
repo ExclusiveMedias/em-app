@@ -9,7 +9,6 @@ const Error = () => {
     <>
       <HeaderTwo />
       <main>
-        <Breadcrumb top_title="404 Error Page"  title="404 Error"/>
         <ErrorArea />
       </main>
       <Footer />
